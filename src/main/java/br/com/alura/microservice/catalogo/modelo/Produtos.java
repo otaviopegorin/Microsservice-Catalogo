@@ -17,7 +17,7 @@ public class Produtos {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
 	private String nome;
 	
 	private BigDecimal valor;
@@ -71,5 +71,10 @@ public class Produtos {
 
 	public void setUrlImagem(String urlImagem) {
 		this.urlImagem = urlImagem;
+	}
+	
+	@Override
+	public String toString() {
+		return "Nome: "+this.nome+" Valor: "+this.valor;
 	}
 }
